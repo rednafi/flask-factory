@@ -39,7 +39,21 @@ Run the docker container:
 sudo docker run -d -p 5000:5000 flask-tmplt
 ```
 
+After running the container, the process can be seen via:
+```
+sudo docker ps
+```
+
+![alt text]()
+
+### Stop and Delete the Container After Experimentation
 Stop the docker container:
+
+```
+
+```
+
+Delete the docker image:
 ```
 
 ```
@@ -47,7 +61,6 @@ Stop the docker container:
 ### Hit the API
 
 ```
- 
 x-api-key : 1234
 
 # replace <word> with what you'd like to see as ascii-art
