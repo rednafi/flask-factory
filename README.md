@@ -60,7 +60,7 @@ base-link : localhoast:5000/ascii-art/<word>
     ```
     This should show all the running containers.
 
-    ![process](https://github.com/rednafi/flask-tmplt/tree/master/imgs/container_process.png)
+    ![process](https://github.com/rednafi/flask-tmplt/blob/master/imgs/containter_process.png)
 
 * Stop the docker container:
 
@@ -75,7 +75,7 @@ base-link : localhoast:5000/ascii-art/<word>
   ```
   This should show all the docker images.
 
-  ![images](https://github.com/rednafi/flask-tmplt/tree/master/imgs/docker_images.png)
+  ![images](https://github.com/rednafi/flask-tmplt/blob/master/imgs/docker_images.png)
 
   
 * Delete the image:
