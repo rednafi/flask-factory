@@ -23,11 +23,7 @@ To run the app, go to `flask-ascii-art/` directory and run:
 ```
 python run_flask.py
 ```
-The app will run locally in port `5000`. You can access it via the following link:
-
-```
-http://0.0.0.0:5000/
-```
+The app will run locally in port `5000`.
 
 ### Run As a Docker Container
 
@@ -43,5 +39,17 @@ Run the docker container:
 sudo docker run -d -p 5000:5000 flask-tmplt
 ```
 
+Stop the docker container:
+```
+
+```
+
 ### Hit the API
 
+```
+ 
+x-api-key : 1234
+
+# replace <word> with what you'd like to see as ascii-art
+base-link : localhoast:5000/ascii-art/<word>
+```
