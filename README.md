@@ -83,8 +83,3 @@ base-link : localhoast:5000/ascii-art/<word>
   ```
   sudo docker rmi <IMAGE_ID>
   ``` 
-
-
-```
-sudo rmi <>
-```
