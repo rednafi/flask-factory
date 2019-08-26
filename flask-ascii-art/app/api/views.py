@@ -21,4 +21,4 @@ def get_ascii_drawing(text):
 
     d = draw_ascii(text)
 
-    return d, 200              # jsonify(d) is another option when exporting dictionary
+    return d, 200  # jsonify(d) is another option when exporting dictionary
