@@ -2,7 +2,7 @@
 
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/) [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/rednafi/protomate/blob/master/LICENSE) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/python/black)
 [![twitter](https://img.shields.io/twitter/url/https/home?style=social)](https://twitter.com)
-[![twitter-follow](https://img.shields.io/twitter/follow/rednafi?label=Follow&style=social)]()
+
 
 ## Directory Tree
 Directory tree for serving a python package as a Flask API
@@ -25,6 +25,8 @@ flask-ascii-art
 To run the app, go to `flask-ascii-art/` directory and run:
 
 ```
+python3 -m venv venv
+pip install -r requirements.txt
 python run_flask.py
 ```
 The app will run locally in port `5000`.
@@ -54,6 +56,8 @@ x-api-key : 1234
 
 base-link : localhoast:5000/ascii-art/<word>
 ```
+Once you hit the api, you should see something like this:
+ ![process](https://github.com/rednafi/flask-tmplt/blob/master/imgs/containter_process.png)
 
 ### Stop and Delete the Container After Experimentation
 
@@ -64,7 +68,7 @@ base-link : localhoast:5000/ascii-art/<word>
     ```
     This should show all the running containers.
 
-    ![process](https://github.com/rednafi/flask-tmplt/blob/master/imgs/containter_process.png)
+    ![process](https://github.com/rednafi/flask-tmplt/blob/master/imgs/postman_flask_api.png)
 
 * Stop the docker container:
 
