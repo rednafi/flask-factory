@@ -25,9 +25,9 @@ flask-ascii-art
 To run the app, go to `flask-ascii-art/` directory and run:
 
 ```
-python3 -m venv venv
-pip install -r requirements.txt
-python run_flask.py
+$ python3 -m venv venv
+$ pip install -r requirements.txt
+$ python run_flask.py
 ```
 The app will run locally in port `5000`.
 
@@ -36,13 +36,13 @@ The app will run locally in port `5000`.
 * Build the docker container:
 
     ```
-    sudo docker build . --tag=flask-tmplt
+    $ sudo docker build . --tag=flask-tmplt
     ```
 
 * Run the docker container: 
 
     ```
-    sudo docker run -d -p 5000:5000 flask-tmplt
+    $ sudo docker run -d -p 5000:5000 flask-tmplt
     ```
 
 ### Hit the API
@@ -64,7 +64,7 @@ Once you hit the api, you should see something like this:
 * Check the docker process:
 
     ```
-    sudo docker ps
+    $ sudo docker ps
     ```
     This should show all the running containers.
 
@@ -73,13 +73,13 @@ Once you hit the api, you should see something like this:
 * Stop the docker container:
 
     ```
-    sudo docker stop <CONTAINER_ID> 
+    $ sudo docker stop <CONTAINER_ID> 
     ```
 
 * Check the docker image:
    
   ```
-  sudo docker images
+  $ sudo docker images
   ```
   This should show all the docker images.
 
@@ -89,5 +89,5 @@ Once you hit the api, you should see something like this:
 * Delete the image:
 
   ```
-  sudo docker rmi <IMAGE_ID>
+  $ sudo docker rmi <IMAGE_ID>
   ``` 
