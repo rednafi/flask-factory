@@ -79,7 +79,7 @@ Once you hit the api, you should see something like this:
 
     ```bash
     $ sudo docker rm <CONTAINER_ID>
-
+    ```
 * Check the docker image:
    
   ```bash
