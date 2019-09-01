@@ -35,13 +35,13 @@ The app will run locally in port `5000`.
 
 * Build the docker container:
 
-    ```
+    ```bash
     $ sudo docker build . --tag=flask-tmplt
     ```
 
 * Run the docker container: 
 
-    ```
+    ```bash
     $ sudo docker run -d -p 5000:5000 flask-tmplt
     ```
 
@@ -63,7 +63,7 @@ Once you hit the api, you should see something like this:
 
 * Check the docker process:
 
-    ```
+    ```bash
     $ sudo docker ps
     ```
     This should show all the running containers.
@@ -72,13 +72,13 @@ Once you hit the api, you should see something like this:
 
 * Stop the docker container:
 
-    ```
+    ```bash
     $ sudo docker stop <CONTAINER_ID> 
     ```
 
 * Check the docker image:
    
-  ```
+  ```bash
   $ sudo docker images
   ```
   This should show all the docker images.
@@ -88,6 +88,22 @@ Once you hit the api, you should see something like this:
   
 * Delete the image:
 
-  ```
+  ```bash
   $ sudo docker rmi <IMAGE_ID>
   ``` 
+
+### Deploy in a Server
+
+To deploy the app in a server, first test the app in the server:
+
+```bash
+$ chmod +x deploy.sh
+$ ./deploy.sh
+```
+
+If it runs without errors, run the following command to deploy the app in daemon mode.
+
+```bash
+$ ./deploy.sh -d
+```
+Check the [Dockerfile](https://github.com/rednafi/flask-tmplt/blob/master/Dockerfile) and [deploy.sh](https://github.com/rednafi/flask-tmplt/blob/master/deploy.sh) to follow how the deployment works.
