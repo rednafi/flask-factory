@@ -64,7 +64,7 @@ Once you hit the api, you should see something like this:
 * Check the docker process:
 
     ```bash
-    $ sudo docker ps
+    $ sudo docker ps -a
     ```
     This should show all the running containers.
 
@@ -75,6 +75,10 @@ Once you hit the api, you should see something like this:
     ```bash
     $ sudo docker stop <CONTAINER_ID> 
     ```
+* Delete the docker container
+
+    ```bash
+    $ sudo docker rm <CONTAINER_ID>
 
 * Check the docker image:
    
