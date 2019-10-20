@@ -73,7 +73,6 @@ docs/_build/
 target/
 
 # Virtual environment
-.env/
 .venv/
 venv/
 

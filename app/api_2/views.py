@@ -1,12 +1,12 @@
 from flask import jsonify
 from flask import request
-from app.api_1.module_main import func_main
-from . import api_1
+from app.api_2.module_main import func_main
+from . import api_2
 
 AUTH_KEY = "1234ABCD"
 
 
-@api_1.route("/api_1/<num>", methods=["GET"])
+@api_2.route("/api_2/<num>", methods=["GET"])
 def get_main_func(num):
 
     # auth
