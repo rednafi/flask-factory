@@ -2,7 +2,7 @@
 
 # add tags and container name
 TAGNAME=flask_demo_v0.1
-CONTAINERNAME=flask_demo
+CONTAINERNAME=flask_template
 
 # add option to run container in detached mode
 DAEMON=$1

@@ -8,15 +8,25 @@
 Directory tree for serving a python package as a Flask API
 
 ```
-flask-ascii-art
-├── app
-│   ├── api
-│   │   ├── ascii_art.py
-│   │   ├── main_func.py
-│   │   ├── __init__.py
-│   │   └── views.py
-│   ├── __init__.py
-└── run_flask.py
+.
+├──app/
+|   ├── api_1
+|   │   ├── __init__.py
+|   │   ├── module_1.py
+|   │   ├── module_main.py
+|   │   └── views.py
+|   ├── api_2
+|   │   ├── __init__.py
+|   │   ├── module_1.py
+|   │   ├── module_main.py
+|   │   └── views.py
+|   └── __init__.py
+├── .dockerignore
+├── .env
+├── .gitignore
+├── deploy.sh
+├── requirements.txt
+└── run.py
 ```
 
 ## Instructions
@@ -27,7 +37,7 @@ To run the app, go to `flask-ascii-art/` directory and run:
 ```
 $ python3 -m venv venv
 $ pip install -r requirements.txt
-$ python run_flask.py
+$ python run.py
 ```
 The app will run locally in port `5000`.
 
@@ -36,13 +46,19 @@ The app will run locally in port `5000`.
 * Build the docker container:
 
     ```bash
-    $ sudo docker build . --tag=flask-tmplt
+    $ sudo docker build . --tag=flask_template
     ```
 
-* Run the docker container: 
+* Run the docker container in detached mode
 
     ```bash
-    $ sudo docker run -d -p 5000:5000 flask-tmplt
+    $ sudo docker run -d -p 5000:5000 flask_template
+    ```
+
+    or, run the container in the attached terminal
+
+    ```bash
+    $ sudo docker run -p 5000:5000 flask_template
     ```
 
 ### Hit the API
@@ -50,11 +66,11 @@ The app will run locally in port `5000`.
 While the above container is running, the API can be accessed via any API development client like [Postman](https://www.getpostman.com/).
 
 ```
-x-api-key : 1234
+x-api-key : ABCD1234
 
 # replace <word> with what you'd like to see as ascii-art
 
-base-link : localhoast:5000/ascii-art/<word>
+base-link : localhoast:5000/api_1/<number>
 ```
 Once you hit the api, you should see something like this:
  ![process](https://github.com/rednafi/flask-tmplt/blob/master/imgs/containter_process.png)
@@ -73,7 +89,7 @@ Once you hit the api, you should see something like this:
 * Stop the docker container:
 
     ```bash
-    $ sudo docker stop <CONTAINER_ID> 
+    $ sudo docker stop <CONTAINER_ID>
     ```
 * Delete the docker container
 
@@ -81,7 +97,7 @@ Once you hit the api, you should see something like this:
     $ sudo docker rm <CONTAINER_ID>
     ```
 * Check the docker image:
-   
+
   ```bash
   $ sudo docker images
   ```
@@ -89,12 +105,12 @@ Once you hit the api, you should see something like this:
 
   ![images](https://github.com/rednafi/flask-tmplt/blob/master/imgs/docker_images.png)
 
-  
+
 * Delete the image:
 
   ```bash
   $ sudo docker rmi <IMAGE_ID>
-  ``` 
+  ```
 
 ### Deploy in a Server
 
