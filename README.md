@@ -32,10 +32,11 @@ Directory tree for serving a python package as a Flask API
 ## Instructions
 
 ### Run the API Directly
-To run the app, go to `flask-ascii-art/` directory and run:
+To run the app, go to the root directory and run:
 
 ```
 $ python3 -m venv venv
+$ source activate venv/bin/activate
 $ pip install -r requirements.txt
 $ python run.py
 ```
