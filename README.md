@@ -110,7 +110,7 @@ Once you hit the api, you should see something like this (you numbers may be dif
   ```
   This should show all the docker images.
 
-  ![Imgur](https://imgur.com/oP4pZpL)
+  ![Imgur](https://imgur.com/oP4pZpL.png)
 
 
 * Delete the image:
