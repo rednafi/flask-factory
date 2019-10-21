@@ -5,7 +5,7 @@
 
 
 ## Directory Tree
-Directory tree for serving a python package as a Flask API
+Directory tree for serving multiple packages as Flask API with multiple endpoints
 
 ```
 .
