@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # add tags and container name
-TAGNAME=flask_demo_v0.1
+TAGNAME=flask_template
 CONTAINERNAME=flask_template
 
 # add option to run container in detached mode
