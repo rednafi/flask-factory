@@ -25,6 +25,7 @@ Directory tree for serving multiple packages as Flask API with multiple endpoint
 ├── .env
 ├── .gitignore
 ├── deploy.sh
+├── Dockerfile
 ├── requirements.txt
 └── run.py
 ```
