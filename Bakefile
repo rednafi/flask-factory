@@ -3,7 +3,6 @@ TAGNAME=flask_template
 CONTAINERNAME=flask_template
 
 
-
 docker/cleanup:
     # stop running container
     docker stop $CONTAINERNAME
@@ -17,7 +16,7 @@ docker/cleanup:
     # remove dangling images
     docker image prune -a --force
 
-
+    
 docker/deploy: @interactive docker/cleanup
     # add option to run container in detached mode
     docker-compose build
