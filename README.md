@@ -45,6 +45,9 @@ uncomment `RUNTIME_ENVIRONMENT='DEVELOPMENT'` and comment out `RUNTIME_ENVIRONME
     The app will run locally in port `5000`.
 
 ### Run the Flask App Locally as a Docker Container
+
+* Go to the environment file (.env), uncomment RUNTIME_ENVIRONMENT='PRODUCTION' and comment out RUNTIME_ENVIRONMENT='DEVELOPMENT' variable.
+
 * Run with an attached terminal
     ```
     bake docker/deploy
