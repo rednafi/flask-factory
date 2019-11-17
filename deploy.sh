@@ -14,7 +14,7 @@ docker stop $CONTAINERNAME
 docker rm $CONTAINERNAME
 
 # remove previous image
-docker rmi $(docker images --format '{{.Repository}}:{{.Tag}}' | grep 'flask_demo')
+docker rmi $(docker images --format '{{.Repository}}:{{.Tag}}' | grep 'imagename')
 
 # remove dangling images
 sudo docker image prune -a --force

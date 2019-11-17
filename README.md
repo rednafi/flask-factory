@@ -32,36 +32,29 @@ Directory tree for serving multiple packages as Flask API with multiple endpoint
 
 ## Instructions
 
-### Run the API Directly
-To run the app, go to the root directory and run:
+### Run the Flask App Locally Without Docker
+* Go to the environment file (`.env`),
+uncomment `RUNTIME_ENVIRONMENT='DEVELOPMENT'` and comment out `RUNTIME_ENVIRONMENT='PRODUCTION'` variable.
 
-```
-$ python3 -m venv venv
-$ source activate venv/bin/activate
-$ pip install -r requirements.txt
-$ python run.py
-```
-The app will run locally in port `5000`.
+* Run the app:
+    ```
+    $ python3 -m venv venv
+    $ source activate venv/bin/activate
+    $ pip install -r requirements.txt
+    $ python run.py
+    ```
+    The app will run locally in port `5000`.
 
-### Run As a Docker Container
-
-* Build the docker container:
-
-    ```bash
-    $ sudo docker build . --tag=flask_template
+### Run the Flask App Locally as a Docker Container
+* Run with an attached terminal
+    ```
+    bake docker/deploy
+    ```
+* Run with detached terminal
+    ```
+    bake docker/deploy -d
     ```
 
-* Run the docker container in attached terminal
-
-    ```bash
-    $ sudo docker run -p 5000:5000 flask_template
-    ```
-
-    or, run the container in detached mode
-
-    ```bash
-    $ sudo docker run -d -p 5000:5000 flask_template
-    ```
 
 ### Hit the API
 
@@ -121,22 +114,4 @@ Once you hit the api, you should see something like this (you numbers may be dif
   $ sudo docker rmi <IMAGE_ID>
   ```
 
-### Deploy in a Server
-For deploying the container in a server, make sure you have
-    * Setup and configured the server properly
-    * Have nginx installed
-    * Have gunicorn installed
-    * Configured a server block in proper way
-To deploy the app in a server, first test the app in the server:
-
-```bash
-$ chmod +x deploy.sh
-$ ./deploy.sh
-```
-
-If it runs without errors, run the following command to deploy the app in daemon mode.
-
-```bash
-$ ./deploy.sh -d
-```
-Check the [Dockerfile](https://github.com/rednafi/flask-tmplt/blob/master/Dockerfile) and [deploy.sh](https://github.com/rednafi/flask-tmplt/blob/master/deploy.sh) to follow how the deployment works.
+Check the [Dockerfile](https://github.com/rednafi/flask-tmplt/blob/master/Dockerfile), [docker-compose.yml](https://github.com/rednafi/flask-tmplt/blob/master/docker-compose.yml) and [Bakefile](https://github.com/rednafi/flask-tmplt/blob/master/Bakefile) to follow how the deployment works.

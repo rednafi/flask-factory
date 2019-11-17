@@ -1,0 +1,24 @@
+# add tags and container name
+TAGNAME=flask_template
+CONTAINERNAME=flask_template
+
+
+
+docker/cleanup:
+    # stop running container
+    docker stop $CONTAINERNAME
+
+    # remove container
+    docker rm $CONTAINERNAME
+
+    # remove previous image
+    docker rmi "$(docker images --format '{{.Repository}}:{{.Tag}}' | grep $TAGNAME)"
+
+    # remove dangling images
+    docker image prune -a --force
+
+
+docker/deploy: @interactive docker/cleanup
+    # add option to run container in detached mode
+    docker-compose build
+    docker-compose up $DAEMON
