@@ -40,10 +40,7 @@ uncomment `RUNTIME_ENVIRONMENT='DEVELOPMENT'` and comment out `RUNTIME_ENVIRONME
 
 * Run the app:
     ```
-    $ python3 -m venv venv
-    $ source activate venv/bin/activate
-    $ pip install -r requirements.txt
-    $ python run.py
+    $ bake offline/run
     ```
     The app will run locally in port `5000`.
 

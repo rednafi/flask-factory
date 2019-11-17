@@ -2,20 +2,34 @@
 TAGNAME=flask_template
 CONTAINERNAME=flask_template
 
-docker/cleanup:
+offline/run:
+    if [ -d "./venv" ];
+    then
+    source venv/bin/activate
+    pip3 install -r requirements.txt
+    python run.py
+
+    else
+    python3 -m venv venv
+    source venv/bin/activate
+    pip3 install -r requirements.txt
+    python run.py
+    fi
+
+docker/cleanup:@interactive
     # stop running container
-    docker stop $CONTAINERNAME
+    sudo docker stop $CONTAINERNAME
 
     # remove container
-    docker rm $CONTAINERNAME
+    sudo docker rm $CONTAINERNAME
 
     # remove previous image
-    docker rmi "$(docker images --format '{{.Repository}}:{{.Tag}}' | grep $TAGNAME)"
+    sudo docker rmi "$(docker images --format '{{.Repository}}:{{.Tag}}' | grep $TAGNAME)"
 
     # remove dangling images
-    docker image prune -a --force
+    sudo docker image prune --force
 
 docker/deploy: @interactive docker/cleanup
     # add option to run container in detached mode
-    docker-compose build
-    docker-compose up $DAEMON
+    sudo docker-compose build
+    sudo docker-compose up $DAEMON
