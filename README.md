@@ -26,6 +26,8 @@ Directory tree for serving multiple packages as Flask API with multiple endpoint
 ├── .gitignore
 ├── deploy.sh
 ├── Dockerfile
+├── docker-compose.yml
+├── Bakefile
 ├── requirements.txt
 └── run.py
 ```
