@@ -5,4 +5,3 @@ api_1 = Blueprint(
 )
 
 from . import views
-

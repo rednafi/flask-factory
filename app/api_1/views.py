@@ -22,10 +22,6 @@ def get_main_func(num):
 
     except Exception as e:
         print(e)
-        d = {
-            "a": num,
-            "b": None,
-            "c": None,
-        }
+        d = {"a": num, "b": None, "c": None}
 
     return jsonify(d), 200

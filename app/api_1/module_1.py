@@ -3,6 +3,7 @@
 
 import random
 
+
 def random_dict(num: int):
     num = int(num)
     d = {
@@ -11,4 +12,3 @@ def random_dict(num: int):
         "random_second": random.randint(0, num),
     }
     return d
-

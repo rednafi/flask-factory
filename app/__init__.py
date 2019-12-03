@@ -3,8 +3,10 @@ from flask_cors import CORS
 from .api_1 import api_1
 from .api_2 import api_2
 
+
 class Config:
     pass
+
 
 def create_app():
     app = Flask(__name__)
