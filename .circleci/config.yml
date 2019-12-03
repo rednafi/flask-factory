@@ -48,5 +48,7 @@ jobs:
           name: linting & run-tests
           command: |
             . venv/bin/activate
+            pip install black
+            pip install pytest
             black app tests
             python -m tests.test_api
