@@ -51,4 +51,4 @@ jobs:
             pip install black
             pip install pytest
             black app tests
-            python -m tests.test_api
+            python -m pytest
