@@ -40,6 +40,7 @@ uncomment `RUNTIME_ENVIRONMENT='DEVELOPMENT'` and comment out `RUNTIME_ENVIRONME
 
 * Run the app:
     ```
+    $ pip install bake-cli
     $ bake offline/run
     ```
     The app will run locally in port `5000`.
