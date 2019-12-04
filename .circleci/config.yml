@@ -50,5 +50,5 @@ jobs:
             . venv/bin/activate
             pip install black
             pip install pytest
-            black app tests
+            black app
             python -m pytest
