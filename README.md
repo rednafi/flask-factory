@@ -9,30 +9,33 @@ Directory tree for serving multiple packages as Flask API with multiple endpoint
 
 ```
 .
-├──app/
-|   ├── api_1
-|   │   ├── __init__.py
-|   │   ├── module_1.py
-|   │   ├── module_main.py
-|   │   └── views.py
-|   ├── api_2
-|   │   ├── __init__.py
-|   │   ├── module_1.py
-|   │   ├── module_main.py
-|   │   └── views.py
-|   └── __init__.py
-├── .dockerignore
-├── .env
-├── .gitignore
-├── deploy.sh
-├── Dockerfile
+├── app
+│   ├── api_1
+│   │   ├── __init__.py
+│   │   ├── module_1.py
+│   │   ├── module_main.py
+│   │   └── views.py
+│   ├── api_2
+│   │   ├── __init__.py
+│   │   ├── module_1.py
+│   │   ├── module_main.py
+│   │   └── views.py
+│   ├── __init__.py
+│   └── tests
+│       └── test_api.py
 ├── docker-compose.yml
-├── Bakefile
+├── Dockerfile
+├── README.md
 ├── requirements.txt
-└── run.py
+├── run.py
+└── rushfile.yml
+
+4 directories, 16 files
 ```
 
 ## Instructions
+
+* Clone the repository & `cd` to the root directory
 
 ### Run the Flask App Locally Without Docker
 * Go to the environment file (`.env`),
@@ -40,8 +43,8 @@ uncomment `RUNTIME_ENVIRONMENT='DEVELOPMENT'` and comment out `RUNTIME_ENVIRONME
 
 * Run the app:
     ```
-    $ pip install bake-cli
-    $ bake offline/run
+    $ pip3 install rush-cli
+    $ rush offline_run
     ```
     The app will run locally in port `5000`.
 
@@ -49,13 +52,9 @@ uncomment `RUNTIME_ENVIRONMENT='DEVELOPMENT'` and comment out `RUNTIME_ENVIRONME
 
 * Go to the environment file (.env), uncomment RUNTIME_ENVIRONMENT='PRODUCTION' and comment out RUNTIME_ENVIRONMENT='DEVELOPMENT' variable.
 
-* Run with an attached terminal
+* Run the docker container
     ```
-    bake docker/deploy
-    ```
-* Run with detached terminal
-    ```
-    bake docker/deploy -d
+    rush docker_deploy
     ```
 
 

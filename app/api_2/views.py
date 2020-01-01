@@ -14,7 +14,7 @@ def get_main_func(num):
     auth = headers.get("X-Api-Key")
 
     # Auth
-    if auth != AUTH_KEY:
+    if str(auth) != AUTH_KEY:
         return jsonify({"error": "unauthorized"}), 200
 
     try:
