@@ -116,4 +116,4 @@ Once you hit the api, you should see something like this (you numbers may be dif
   $ sudo docker rmi <IMAGE_ID>
   ```
 
-Check the [Dockerfile](https://github.com/rednafi/flask-tmplt/blob/master/Dockerfile), [docker-compose.yml](https://github.com/rednafi/flask-tmplt/blob/master/docker-compose.yml) and [Bakefile](https://github.com/rednafi/flask-tmplt/blob/master/Bakefile) to follow how the deployment works.
+Check the [Dockerfile](https://github.com/rednafi/flask-tmplt/blob/master/Dockerfile), [docker-compose.yml](https://github.com/rednafi/flask-tmplt/blob/master/docker-compose.yml) and [rushfile.yml](https://github.com/rednafi/flask-tmplt/blob/master/rushfile.yml) to follow how the deployment works.
