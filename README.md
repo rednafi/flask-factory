@@ -1,61 +1,78 @@
-# Flask Template
-
-[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/) [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/rednafi/protomate/blob/master/LICENSE) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/python/black)
-[![twitter](https://img.shields.io/twitter/url/https/home?style=social)](https://twitter.com)
 
 
-## Directory Tree
+<div align="center">
+    <h1> Flask Factory </h1>
+    <h3>Template for Flask App with Factory Pattern Architecture</h3>
+</div>
+
+
+<div align="center">
+    <a href="https://github.com/rednafi/flask-factory/issues"><img src="https://img.shields.io/github/issues/rednafi/pysanity" /></a>
+    <a href="https://github.com/rednafi/flask-factory/network/members"><img src="https://img.shields.io/github/forks/rednafi/flask-factory" /></a>
+    <a href="https://github.com/rednafi/flask-factory/stargazers"><img src="https://img.shields.io/github/stars/rednafi/flask-factory" /></a>
+    <a href="https://github.com/rednafi/flask-factory/stargazers"><img src="https://img.shields.io/badge/code%20style-black-000000.svg" /></a>
+    <a href="https://twitter.com/intent/retweet?tweet_id=1222434622442594304"><img src="https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2Frednafi%2Fpysanity" /></a>
+
+</div>
+
+<p>&nbsp;</p>
+
+## Architecture
+
 Directory tree for serving multiple packages as Flask API with multiple endpoints
 
-```
-.
+```.
 ├── app
-│   ├── api_1
+│   ├── api_a
 │   │   ├── __init__.py
-│   │   ├── module_1.py
 │   │   ├── module_main.py
+│   │   ├── module_sub.py
 │   │   └── views.py
-│   ├── api_2
+│   ├── api_b
 │   │   ├── __init__.py
-│   │   ├── module_1.py
 │   │   ├── module_main.py
+│   │   ├── module_sub.py
 │   │   └── views.py
 │   ├── __init__.py
 │   └── tests
+│       ├── __init__.py
 │       └── test_api.py
 ├── docker-compose.yml
 ├── Dockerfile
+├── flask_run.py
 ├── README.md
 ├── requirements.txt
-├── run.py
-└── rushfile.yml
+└── settings.toml
 
-4 directories, 16 files
+4 directories, 17 files
 ```
-
 ## Instructions
 
 * Clone the repository & `cd` to the root directory
 
 ### Run the Flask App Locally Without Docker
 * Go to the environment file (`.env`),
-uncomment `RUNTIME_ENVIRONMENT='DEVELOPMENT'` and comment out `RUNTIME_ENVIRONMENT='PRODUCTION'` variable.
+uncomment `ENV_FOR_DYNACONF="development"` and comment out `ENV_FOR_DYNACONF="production"` variable.
 
-* Run the app:
-    ```
-    $ pip3 install rush-cli
-    $ rush offline_run
+* Run the app by executing the folling instructions:
+
+    ```bash
+    python3.8 -m venv venv
+    source venv/bin/activate
     ```
     The app will run locally in port `5000`.
 
-### Run the Flask App Locally as a Docker Container
+### Run the Flask App in a Docker Container
 
-* Go to the environment file (.env), uncomment RUNTIME_ENVIRONMENT='PRODUCTION' and comment out RUNTIME_ENVIRONMENT='DEVELOPMENT' variable.
+* Go to the environment file (`.env`),
+uncomment `ENV_FOR_DYNACONF="production"` and comment out `ENV_FOR_DYNACONF="development"` variable.
 
 * Run the docker container
+
+    ```bash
+    docker-compose up
     ```
-    rush docker_deploy
-    ```
+    The app will run locally in port `5000`.
 
 
 ### Hit the API
@@ -63,11 +80,13 @@ uncomment `RUNTIME_ENVIRONMENT='DEVELOPMENT'` and comment out `RUNTIME_ENVIRONME
 While the above container is running, the API can be accessed via any API development client like [Postman](https://www.getpostman.com/).
 
 ```
+# this shoud go with your header
+
 x-api-key : ABCD1234
 
 # add your desired integer/float, replacing the <number>
 
-base-link : localhoast:5000/api_1/<number>
+base-link : localhoast:5000/api-a/<number>
 ```
 Once you hit the api, you should see something like this (you numbers may be different since we are returning random numbers each time):
 
@@ -79,41 +98,9 @@ Once you hit the api, you should see something like this (you numbers may be dif
 }
  ```
 
-### Stop and Delete the Container After Experimentation
+### Stop the Container
+Run
 
-* Check the docker process:
-
-    ```bash
-    $ sudo docker ps
-    ```
-    This should show all the running containers.
-
-    ![Imgur](https://imgur.com/SUHI5pb.png)
-
-* Stop the docker container:
-
-    ```bash
-    $ sudo docker stop <CONTAINER_ID>
-    ```
-* Delete the docker container
-
-    ```bash
-    $ sudo docker rm <CONTAINER_ID>
-    ```
-* Check the docker image:
-
-  ```bash
-  $ sudo docker images
-  ```
-  This should show all the docker images.
-
-  ![Imgur](https://imgur.com/oP4pZpL.png)
-
-
-* Delete the image:
-
-  ```bash
-  $ sudo docker rmi <IMAGE_ID>
-  ```
-
-Check the [Dockerfile](https://github.com/rednafi/flask-tmplt/blob/master/Dockerfile), [docker-compose.yml](https://github.com/rednafi/flask-tmplt/blob/master/docker-compose.yml) and [rushfile.yml](https://github.com/rednafi/flask-tmplt/blob/master/rushfile.yml) to follow how the deployment works.
+```bash
+docker-compose down
+```
