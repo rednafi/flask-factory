@@ -2,7 +2,7 @@
 
 <div align="center">
     <h1> Flask Factory </h1>
-    <h3>Template for Flask App with Factory Pattern Architecture</h3>
+    <h4>Template for Flask App with Factory Pattern Architecture</h4>
 </div>
 
 
