@@ -48,17 +48,24 @@ Directory tree for serving multiple packages as Flask API with multiple endpoint
 ```
 
 ## Setup
-* Install [docker](https://docs.docker.com/install/) and [docker-compose](https://docs.docker.com/compose/install/) on your machine
 
+* Install [docker](https://docs.docker.com/install/) and [docker-compose](https://docs.docker.com/compose/install/) on your machine
 
 * Clone the repository & `cd` to the root directory
 
 ## Run the App Locally Without Docker
 
 * Create and activate python virtual environment via:
+
     ```bash
     python3.8 -m venv venv
     source venv/bin/activate
+    ```
+
+* Install the dependencies via:
+
+    ```bash
+    pip install -r requirements.txt
     ```
 
 * Go to the environment file (`.env`),
@@ -69,6 +76,7 @@ uncomment `ENV_FOR_DYNACONF="development"` and comment out `ENV_FOR_DYNACONF="pr
     ```bash
     python flask_run.py
     ```
+
     The app will run locally in port `5000`.
 
 ## Run the App in a Docker Container
@@ -81,6 +89,7 @@ uncomment `ENV_FOR_DYNACONF="production"` and comment out `ENV_FOR_DYNACONF="dev
     ```bash
     docker-compose up
     ```
+
     The app will run locally in port `5000`.
 
 
@@ -97,6 +106,7 @@ x-api-key : ABCD1234
 
 base-link : localhoast:5000/api-a/<number>
 ```
+
 Once you hit the api, you should see something like this (you numbers may be different since we are returning random numbers each time):
 
  ```bash
@@ -108,6 +118,7 @@ Once you hit the api, you should see something like this (you numbers may be dif
  ```
 
 ## Stop the Container
+
 Run
 
 ```bash
