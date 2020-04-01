@@ -124,3 +124,11 @@ Run
 ```bash
 docker-compose down
 ```
+
+## Remarks
+This template is developed and tested on
+
+- Python 3.8
+- Docker version 19.03
+- docker-compose 1.25.4
+- Ubuntu 18.04 LTS
