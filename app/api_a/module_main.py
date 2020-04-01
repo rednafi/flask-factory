@@ -1,4 +1,4 @@
-from app.api_1.module_1 import random_dict
+from app.api_a.module_sub import random_dict
 
 
 def func_main(num: int):

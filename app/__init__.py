@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_cors import CORS
-from .api_1 import api_1
-from .api_2 import api_2
+from .api_a import api_a
+from .api_b import api_b
 
 
 class Config:
@@ -24,7 +24,7 @@ def create_app():
         )
         return response
 
-    app.register_blueprint(api_1)
-    app.register_blueprint(api_2)
+    app.register_blueprint(api_a)
+    app.register_blueprint(api_b)
 
     return app

@@ -1,0 +1,29 @@
+name: Python Code Quality and Lint
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[skip-ci]')"
+
+    steps:
+      - uses: actions/checkout@v1
+      - uses: ricardochaves/python-lint@v1.1.0
+        with:
+          python-root-list: "python_alelo tests"
+          use-pylint: false
+          use-pycodestyle: false
+          use-flake8: true
+          use-black: true
+          use-mypy: false
+          use-isort: true
+          extra-pylint-options: ""
+          extra-pycodestyle-options: ""
+          extra-flake8-options: ""
+          extra-black-options: ""
+          extra-mypy-options: ""
+          extra-isort-options: ""

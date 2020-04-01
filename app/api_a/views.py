@@ -1,20 +1,20 @@
 from flask import jsonify
 from flask import request
-from app.api_2.module_main import func_main
-from . import api_2
+from app.api_a.module_main import func_main
+from . import api_a
 
 AUTH_KEY = "1234ABCD"
 
 
-@api_2.route("/api_2/<num>", methods=["GET"])
-def get_main_func(num):
+@api_a.route("/api-a/<num>", methods=["GET"])
+def view(num):
 
     # auth
     headers = request.headers
     auth = headers.get("X-Api-Key")
 
     # Auth
-    if str(auth) != AUTH_KEY:
+    if auth != AUTH_KEY:
         return jsonify({"error": "unauthorized"}), 200
 
     try:
