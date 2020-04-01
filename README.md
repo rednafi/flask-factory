@@ -46,23 +46,32 @@ Directory tree for serving multiple packages as Flask API with multiple endpoint
 
 4 directories, 17 files
 ```
-## Instructions
+
+## Setup
+* Install [docker](https://docs.docker.com/install/) and [docker-compose](https://docs.docker.com/compose/install/) on your machine
+
 
 * Clone the repository & `cd` to the root directory
 
-### Run the Flask App Locally Without Docker
-* Go to the environment file (`.env`),
-uncomment `ENV_FOR_DYNACONF="development"` and comment out `ENV_FOR_DYNACONF="production"` variable.
+## Run the App Locally Without Docker
 
-* Run the app by executing the folling instructions:
-
+* Create and activate python virtual environment via:
     ```bash
     python3.8 -m venv venv
     source venv/bin/activate
     ```
+
+* Go to the environment file (`.env`),
+uncomment `ENV_FOR_DYNACONF="development"` and comment out `ENV_FOR_DYNACONF="production"` variable.
+
+* Run the app by executing the `flask_run.py` file:
+
+    ```bash
+    python flask_run.py
+    ```
     The app will run locally in port `5000`.
 
-### Run the Flask App in a Docker Container
+## Run the App in a Docker Container
 
 * Go to the environment file (`.env`),
 uncomment `ENV_FOR_DYNACONF="production"` and comment out `ENV_FOR_DYNACONF="development"` variable.
@@ -75,7 +84,7 @@ uncomment `ENV_FOR_DYNACONF="production"` and comment out `ENV_FOR_DYNACONF="dev
     The app will run locally in port `5000`.
 
 
-### Hit the API
+## Hit the API
 
 While the above container is running, the API can be accessed via any API development client like [Postman](https://www.getpostman.com/).
 
@@ -98,7 +107,7 @@ Once you hit the api, you should see something like this (you numbers may be dif
 }
  ```
 
-### Stop the Container
+## Stop the Container
 Run
 
 ```bash
