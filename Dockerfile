@@ -8,6 +8,6 @@ ENV FLASK_DEBUG 0
 ENV FLASK_APP flask_run.py
 ENV FLASK_RUN_HOST 0.0.0.0
 RUN pip3 install -r requirements.txt
-EXPOSE 5000
+EXPOSE 4000
 
-CMD ["gunicorn", "-b", "0.0.0.0:5000", "flask_run:application"]
+CMD ["gunicorn", "-b", "0.0.0.0:4000", "flask_run:application"]
