@@ -6,6 +6,7 @@ jobs:
     docker:
       - image: circleci/python:3.8.2
     steps:
+      - checkout
       - run:
           name: Build
           command: |
