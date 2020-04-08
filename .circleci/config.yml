@@ -3,22 +3,13 @@ version: 2
 jobs:
   build:
     #...
-    machine:
-      enabled: true
+    docker:
+      - image: circleci/python3.8.2
     steps:
       - run:
           name: Build
           command: |
             echo "You know you should write tests, right?"
-
-            # install venv
-            sudo apt install python3.8-venv
-
-            # make venv
-            python3.8 -m venv venv
-
-            # activate venv
-            source venv/bin/activate
 
             # install pytest
             pip install -U pytest
