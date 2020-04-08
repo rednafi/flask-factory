@@ -56,7 +56,7 @@ jobs:
             # remove the image of the base app
             # this app will be rebuild
             # ignore the containers that do not need to be rebuilt
-            docker rmi $(docker images flaskfactory_app)
+            docker rmi $(docker images flaskfactory_flask_app)
 
             # bring up the containers again
             docker-compose up -d'
