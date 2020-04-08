@@ -77,7 +77,7 @@ uncomment `ENV_FOR_DYNACONF="development"` and comment out `ENV_FOR_DYNACONF="pr
     python flask_run.py
     ```
 
-    The app will run locally in port `5000`.
+    The app will run locally in port `4000`.
 
 ## Run the App in a Docker Container
 
@@ -90,7 +90,7 @@ uncomment `ENV_FOR_DYNACONF="production"` and comment out `ENV_FOR_DYNACONF="dev
     docker-compose up
     ```
 
-    The app will run locally in port `5000`.
+    The app will run locally in port `4000`.
 
 
 ## Hit the API
