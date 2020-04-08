@@ -1,6 +1,6 @@
 [production]
 environment = "production"
-flask_config = { port = 5000 }
+flask_config = { port = 4000 }
 
 [development]
 environment = "development"
