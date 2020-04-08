@@ -4,7 +4,7 @@ jobs:
   build:
     #...
     docker:
-      - image: circleci/python3.8
+      - image: circleci/python:3.8.2
     steps:
       - run:
           name: Build
