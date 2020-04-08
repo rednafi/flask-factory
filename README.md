@@ -104,7 +104,7 @@ x-api-key : ABCD1234
 
 # add your desired integer/float, replacing the <number>
 
-base-link : localhoast:5000/api-a/<number>
+base-link : localhoast:4000/api-a/<number>
 ```
 
 Once you hit the api, you should see something like this (you numbers may be different since we are returning random numbers each time):
