@@ -1,7 +1,8 @@
 version: "3"
 services:
   flask_app:
-    container_name: "flask-factory"
+    image: rednafi/flaskfactory:v2
+    container_name: "flaskfactory"
     build:
       context: ./
       dockerfile: Dockerfile
