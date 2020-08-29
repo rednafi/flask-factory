@@ -92,12 +92,14 @@ It should return a response similar to this:
 
 ### With Python (Httpx)
 
-* Install [httpx](https://github.com/encode/httpx) in your local environment:
+[Httpx](https://github.com/encode/httpx) is a modern and faster alternative to Python's revered [requests](https://github.com/psf/requests) library with similar public API.
+
+* Install `httpx` in your local environment:
 
     ```
     pip install httpx
     ```
-    
+
 * Run:
     ```python
     import httpx
@@ -120,7 +122,7 @@ It should return a response similar to this:
 
 ## Stop the Container
 
-Run
+Run:
 
 ```bash
 docker-compose down
