@@ -1,10 +1,19 @@
 version: "3"
 services:
   web:
+    # Give your image a static name
     image: rednafi/flask-factory:v2
+
+    # Give your container a static name
     container_name: flask-factory
+
     build:
+      # Explicitly show docker-cli where your Dockerfile lies
       context: ./
+
+      # Explicitly state the name of your dockerfile
       dockerfile: Dockerfile
+
+    # Expose ports
     ports:
       - 4000:4000

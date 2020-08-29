@@ -53,33 +53,7 @@ Directory tree for serving multiple packages as Flask API with multiple endpoint
 
 * Clone the repository & `cd` to the root directory
 
-## Run the App Locally Without Docker
-
-* Create and activate python virtual environment via:
-
-    ```bash
-    python3.8 -m venv venv
-    source venv/bin/activate
-    ```
-
-* Install the dependencies via:
-
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-* Go to the environment file (`.env`),
-uncomment `ENV_FOR_DYNACONF="development"` and comment out `ENV_FOR_DYNACONF="production"` variable.
-
-* Run the app by executing the `flask_run.py` file:
-
-    ```bash
-    python flask_run.py
-    ```
-
-    The app will run locally in port `4000`.
-
-## Run the App in a Docker Container
+## Run
 
 * Go to the environment file (`.env`),
 uncomment `ENV_FOR_DYNACONF="production"` and comment out `ENV_FOR_DYNACONF="development"` variable.
@@ -129,6 +103,6 @@ docker-compose down
 This template is developed and tested on
 
 - Python 3.8
-- Docker version 19.03
-- docker-compose 1.25.4
-- Ubuntu 18.04 LTS
+- Docker version 19.03.12
+- docker-compose 1.26.2
+- Ubuntu 20.04 LTS
