@@ -68,29 +68,55 @@ uncomment `ENV_FOR_DYNACONF="production"` and comment out `ENV_FOR_DYNACONF="dev
     The app will run locally in port `4000`.
 
 
-## Hit the API
+## Check the API
 
 While the above container is running, the API can be accessed via any API development client like [Postman](https://www.getpostman.com/).
 
+### With CuRL
+
+Run the following command to test the api with curl. Make sure you're sending `X-Api-Key: 1234ABCD` with the header:
+
 ```
-# this shoud go with your header
-
-x-api-key : ABCD1234
-
-# add your desired integer/float, replacing the <number>
-
-base-link : localhoast:4000/api-a/<number>
+curl -H "Accept: application/json" -H "Content-Type: application/json" -H "X-Api-Key: 1234ABCD" http://localhost:4000/api-a/123
 ```
 
-Once you hit the api, you should see something like this (you numbers may be different since we are returning random numbers each time):
+It should return a response similar to this:
 
- ```bash
- {
-    "random_first": 111,
-    "random_second": 82,
-    "seed": 123
+```json
+{
+    "random_first":16,
+    "random_second":73,
+    "seed":123
 }
- ```
+```
+
+### With Python (Httpx)
+
+* Install [httpx](https://github.com/encode/httpx) in your local environment:
+
+    ```
+    pip install httpx
+    ```
+    
+* Run:
+    ```python
+    import httpx
+
+
+    headers = {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "X-Api-Key": "1234ABCD",
+    }
+
+    with httpx.Client() as client:
+        resp = client.get("http://localhost:4000/api-a/123", headers=headers)
+        resp_json = resp.json()
+
+    # Check successful status code
+    resp.status_code == 200
+    print(resp_json)
+    ```
 
 ## Stop the Container
 
