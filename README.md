@@ -50,16 +50,16 @@ Directory tree for serving multiple packages as Flask API with multiple endpoint
 
 ## Setup
 
-* Install [docker](https://docs.docker.com/install/) and [docker-compose](https://docs.docker.com/compose/install/) on your machine
+* Install [docker](https://docs.docker.com/install/) and [docker-compose](https://docs.docker.com/compose/install/) on your machine.
 
-* Clone the repository & `cd` to the root directory
+* Clone the repository & `cd` to the root directory.
 
 ## Run
 
 * Go to the environment file (`.env`),
 uncomment `ENV_FOR_DYNACONF="production"` and comment out `ENV_FOR_DYNACONF="development"` variable.
 
-* Run the docker container
+* Run the docker container:
 
     ```bash
     docker-compose up
@@ -109,7 +109,7 @@ It should return a response similar to this:
         "Content-Type": "application/json",
         "X-Api-Key": "1234ABCD",
     }
-    
+
     with httpx.Client() as client:
         resp = client.get("http://localhost:4000/api-a/123", headers=headers)
         resp_json = resp.json()
