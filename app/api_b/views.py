@@ -15,7 +15,7 @@ def view(num):
 
     # Auth
     if str(auth) != AUTH_KEY:
-        return jsonify({"error": "unauthorized"}), 200
+        return jsonify({"error": "unauthorized"}), 401
 
     try:
         d = func_main(num)

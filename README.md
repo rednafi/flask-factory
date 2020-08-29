@@ -42,6 +42,7 @@ Directory tree for serving multiple packages as Flask API with multiple endpoint
 ├── flask_run.py
 ├── README.md
 ├── requirements.txt
+├── requirements-dev.txt
 └── settings.toml
 
 4 directories, 17 files
