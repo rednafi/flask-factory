@@ -1,6 +1,6 @@
 from flask import jsonify
 from flask import request
-from app.api_b.module_main import func_main
+from .module_main import func_main
 from . import api_b
 
 AUTH_KEY = "1234ABCD"
