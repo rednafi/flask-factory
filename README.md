@@ -57,7 +57,7 @@ Directory tree for serving multiple packages as Flask API with multiple endpoint
 ## Run
 
 * Go to the environment file (`.env`),
-uncomment `ENV_FOR_DYNACONF="production"` and comment out `ENV_FOR_DYNACONF="development"` variable.
+uncomment `ENVVIRONMENT=production` and comment out `ENVIRONMENT=development` variable.
 
 * Run the docker container:
 
