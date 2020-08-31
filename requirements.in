@@ -2,3 +2,4 @@ flask
 gunicorn
 django-environ
 Flask-HTTPAuth
+flask-cors

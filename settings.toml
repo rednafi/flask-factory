@@ -1,7 +1,0 @@
-[production]
-environment = "production"
-flask_config = { port = 4000 }
-
-[development]
-environment = "development"
-flask_config = { port = 4000 }
