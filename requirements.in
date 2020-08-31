@@ -1,0 +1,4 @@
+flask
+gunicorn
+django-environ
+Flask-HTTPAuth
