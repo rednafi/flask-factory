@@ -1,4 +1,4 @@
-import environ
+from konfik import Konfik
 from pathlib import Path
 
 # Env file directory
@@ -6,14 +6,11 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
 ENV_FILE = BASE_DIR / ".env"
 
-# Variable cast
-env = environ.Env(PORT=int)
-
-# Read env file
-env.read_env(str(ENV_FILE))
+# Read .env
+konfik = Konfik(ENV_FILE)
+config = konfik.config
 
 # Variables
-ENVIRONMENT=env("ENVIRONMENT")
-HOST=env("HOST")
-PORT=env("PORT")
-
+ENVIRONMENT = config.ENVIRONMENT
+HOST = config.HOST
+PORT = config.PORT

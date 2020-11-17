@@ -1,5 +1,5 @@
 flask
 gunicorn
-django-environ
+konfik
 Flask-HTTPAuth
 flask-cors

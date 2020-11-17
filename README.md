@@ -6,22 +6,13 @@
 </div>
 
 
-<div align="center">
-    <a href="https://github.com/rednafi/flask-factory/issues"><img src="https://img.shields.io/github/issues/rednafi/pysanity" /></a>
-    <a href="https://github.com/rednafi/flask-factory/network/members"><img src="https://img.shields.io/github/forks/rednafi/flask-factory" /></a>
-    <a href="https://github.com/rednafi/flask-factory/stargazers"><img src="https://img.shields.io/github/stars/rednafi/flask-factory" /></a>
-    <a href="https://github.com/rednafi/flask-factory/stargazers"><img src="https://img.shields.io/badge/code%20style-black-000000.svg" /></a>
-    <a href="https://twitter.com/intent/retweet?tweet_id=1222434622442594304"><img src="https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2Frednafi%2Fpysanity" /></a>
-
-</div>
-
-<p>&nbsp;</p>
 
 ## Architecture
 
 Directory tree for serving multiple packages as Flask API with multiple endpoints
 
-```.
+```
+.
 ├── app
 │   ├── api_a
 │   │   ├── __init__.py
@@ -33,19 +24,19 @@ Directory tree for serving multiple packages as Flask API with multiple endpoint
 │   │   ├── module_main.py
 │   │   ├── module_sub.py
 │   │   └── views.py
+│   ├── flask_run.py
 │   ├── __init__.py
+│   ├── settings.py
 │   └── tests
 │       ├── __init__.py
 │       └── test_api.py
 ├── docker-compose.yml
 ├── Dockerfile
-├── flask_run.py
-├── README.md
-├── requirements.txt
 ├── requirements-dev.txt
-└── settings.toml
+├── requirements.in
+└── requirements.txt
 
-4 directories, 17 files
+4 directories, 18 files
 ```
 
 ## Setup
@@ -56,16 +47,13 @@ Directory tree for serving multiple packages as Flask API with multiple endpoint
 
 ## Run
 
-* Go to the environment file (`.env`),
-uncomment `ENVVIRONMENT=production` and comment out `ENVIRONMENT=development` variable.
+Run the docker container:
 
-* Run the docker container:
+```bash
+docker-compose up
+```
 
-    ```bash
-    docker-compose up
-    ```
-
-    The app will run locally in port `4000`.
+The app will run locally in port `4000`.
 
 
 ## Check the API
@@ -134,6 +122,6 @@ docker-compose down
 This template is developed and tested on
 
 - Python 3.8
-- Docker version 19.03.12
+- Docker version 19.03.13
 - docker-compose 1.26.2
 - Ubuntu 20.04 LTS
