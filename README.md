@@ -16,13 +16,13 @@ Directory tree for serving multiple packages as Flask API with multiple endpoint
 ├── app
 │   ├── api_a
 │   │   ├── __init__.py
-│   │   ├── module_main.py
-│   │   ├── module_sub.py
+│   │   ├── main.py
+│   │   ├── sub.py
 │   │   └── views.py
 │   ├── api_b
 │   │   ├── __init__.py
-│   │   ├── module_main.py
-│   │   ├── module_sub.py
+│   │   ├── main.py
+│   │   ├── sub.py
 │   │   └── views.py
 │   ├── flask_run.py
 │   ├── __init__.py
@@ -30,13 +30,16 @@ Directory tree for serving multiple packages as Flask API with multiple endpoint
 │   └── tests
 │       ├── __init__.py
 │       └── test_api.py
+├── .env
+├── .gitignore
 ├── docker-compose.yml
 ├── Dockerfile
+├── pyproject.toml
 ├── requirements-dev.txt
 ├── requirements.in
 └── requirements.txt
 
-4 directories, 18 files
+4 directories, 21 files
 ```
 
 ## Setup

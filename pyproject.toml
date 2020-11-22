@@ -1,0 +1,8 @@
+
+# Third-party configs
+[tool.black]
+line-length = 88
+
+[tool.isort]
+profile = "black"
+atomic = true

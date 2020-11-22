@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_cors import CORS
+
 from .api_a import api_a
 from .api_b import api_b
 

@@ -22,4 +22,4 @@ ENV FLASK_RUN_HOST 0.0.0.0
 EXPOSE 4000
 
 # Run Flask command
-CMD ["gunicorn", "-b", "0.0.0.0:4000", "app.flask_run:application"]
+CMD ["gunicorn", "-b", "0.0.0.0:4000", "app.run:application"]
