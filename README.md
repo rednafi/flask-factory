@@ -111,6 +111,15 @@ It should return a response similar to this:
     # Print JSON response
     print(resp_json)
     ```
+## Run the Tests
+
+Run:
+
+```
+pytest
+```
+
+If you run the tests while the docker container is running, pytest will run all tests. However, pytest will only run the unit tests if you run the tests offline.
 
 ## Stop the Container
 
