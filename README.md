@@ -119,7 +119,7 @@ Run:
 pytest
 ```
 
-If you run the tests while the docker container is running, pytest will run all tests. However, pytest will only run the unit tests if you run the tests offline.
+If you run the tests while the Docker container is running, pytest will run all the tests. However, pytest will only run the unit tests if you run them offline.
 
 ## Stop the Container
 
