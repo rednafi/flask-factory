@@ -3,6 +3,9 @@
 <div align="center">
     <h1> Flask Factory </h1>
     <h4>Flask App Template with Factory Pattern Architecture</h4>
+
+![zarak-khan-Ve2SL0zMhWk-unsplash](https://user-images.githubusercontent.com/30027932/100132004-043a0d80-2eaf-11eb-8880-33a2e6fc4f15.jpg)
+
 </div>
 
 
