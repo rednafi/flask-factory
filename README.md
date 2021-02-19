@@ -105,14 +105,14 @@ It should return a response similar to this:
     }
 
     with httpx.Client() as client:
-        resp = client.get("http://localhost:4000/api-a/123", headers=headers)
-        resp_json = resp.json()
+        response = client.get("http://localhost:4000/api-a/123", headers=headers)
+        json_data = response.json()
 
-    # Check successful status code
-    assert resp.status_code == 200
+    # Check successful status code.
+    assert response.status_code == 200
 
-    # Print JSON response
-    print(resp_json)
+    # Print JSON response.
+    print(json_data)
     ```
 ## Run the Tests
 
