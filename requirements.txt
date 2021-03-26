@@ -4,21 +4,39 @@
 #
 #    pip-compile --output-file=requirements.txt requirements.in
 #
-click==7.1.2              # via flask
-flask-cors==3.0.9         # via -r requirements.in
-flask-httpauth==4.2.0     # via -r requirements.in
-flask==1.1.2              # via -r requirements.in, flask-cors, flask-httpauth
-gunicorn==20.0.4          # via -r requirements.in
-itsdangerous==1.1.0       # via flask
-jinja2==2.11.2            # via flask
-konfik==2.0.3             # via -r requirements.in
-markupsafe==1.1.1         # via jinja2
-pygments==2.7.2           # via konfik
-python-dotenv==0.15.0     # via konfik
-pyyaml==5.3.1             # via konfik
-six==1.15.0               # via flask-cors
-toml==0.10.2              # via konfik
-werkzeug==1.0.1           # via flask
+click==7.1.2
+    # via flask
+flask-cors==3.0.9
+    # via -r requirements.in
+flask-httpauth==4.2.0
+    # via -r requirements.in
+flask==1.1.2
+    # via
+    #   -r requirements.in
+    #   flask-cors
+    #   flask-httpauth
+gunicorn==20.0.4
+    # via -r requirements.in
+itsdangerous==1.1.0
+    # via flask
+jinja2==2.11.2
+    # via flask
+konfik==2.0.3
+    # via -r requirements.in
+markupsafe==1.1.1
+    # via jinja2
+pygments==2.7.2
+    # via konfik
+python-dotenv==0.15.0
+    # via konfik
+pyyaml==5.4
+    # via konfik
+six==1.15.0
+    # via flask-cors
+toml==0.10.2
+    # via konfik
+werkzeug==1.0.1
+    # via flask
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
