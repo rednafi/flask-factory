@@ -25,7 +25,7 @@ konfik==2.0.3
     # via -r requirements.in
 markupsafe==1.1.1
     # via jinja2
-pygments==2.7.2
+pygments==2.7.4
     # via konfik
 python-dotenv==0.15.0
     # via konfik
